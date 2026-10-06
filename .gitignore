@@ -1,0 +1,23 @@
+# NetBeans & IDE
+build/
+dist/
+nbproject/private/
+.nb-cache/
+.vscode/
+.idea/
+
+# Java compiled
+*.class
+*.jar
+*.war
+*.ear
+
+# Environment & database
+*.db
+*.sqlite
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db

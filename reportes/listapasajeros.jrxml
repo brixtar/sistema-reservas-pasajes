@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e42682f5-ae77-4ec9-ac97-7648bd27dbdb">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="viaje_id" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="vehiculo" class="java.lang.String"/>
+	<parameter name="conductor" class="java.lang.String"/>
+	<parameter name="horario" class="java.lang.String"/>
+	<field name="dni" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="domicilio" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="cantidad" class="java.lang.String"/>
+	<field name="pagado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="96" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="54" width="50" height="18" uuid="aba162f3-ac4d-4831-9296-d5e7ed77dbf5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Viajes N°:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="88" y="52" width="54" height="20" uuid="05ffd00f-dee5-41a8-939c-bce40b3d0946"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{viaje_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="342" y="52" width="34" height="18" uuid="8c45df37-0e20-432f-82ec-9474e80eb06d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="376" y="52" width="56" height="18" uuid="0d34108b-1f95-4a47-b56a-327c98a6dfaa"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="432" y="52" width="59" height="18" uuid="1f906f12-15d3-4f7e-ab45-8a586e21cbff"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Horario:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="376" y="74" width="166" height="20" uuid="81e03eec-4960-4451-ac00-941f54b9fdb3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vehiculo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="74" width="174" height="20" uuid="0bcf5e5b-1fa8-4010-83a1-c184816130ae"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{conductor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="74" width="69" height="20" uuid="1c8aa41a-251e-4e12-83a7-2df7dcbd75df"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Conductor:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="74" width="70" height="20" uuid="a4e8c0d1-64d8-4d76-9e4b-a49398ee5e18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehículo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="491" y="52" width="51" height="18" uuid="a917e6cd-6050-4d5c-a0c2-230eec9224fe"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{horario}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="10">
+				<reportElement x="15" y="0" width="218" height="52" uuid="68c3894d-a050-4409-90e2-1fad55d0e8b1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="15" y="0" width="233" height="30" uuid="6ce1d4a5-fcf4-4bfd-8bff-d4fc103a975f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FICHA DE VIAJE]]></text>
+			</staticText>
+			<image>
+				<reportElement x="262" y="7" width="293" height="35" uuid="b8be1979-714b-4023-b301-97a972afdc78"/>
+				<imageExpression><![CDATA["C:\\SistemaGestionDePasajeros\\src\\reportes\\logo-reporte.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<rectangle>
+				<reportElement x="4" y="0" width="547" height="20" uuid="c6ebc648-f4da-4fe3-ab29-876cebc057fe"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="24" width="58" height="15" uuid="7aa9b68b-8d61-4464-9152-32867cd8cf9a"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="0" width="519" height="20" uuid="5c9e070e-07c2-4838-8c63-d2c1c90b2153"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lista de Pasajeros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="24" width="134" height="15" uuid="20081878-5d25-4b59-ba10-13c871be1c51"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="531" y="24" width="20" height="15" uuid="67faecf9-4787-4567-826e-9d3b5471bd89"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[P]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="24" width="27" height="15" uuid="b26c829a-e87e-4a98-bc4a-6293ebf26e32"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cant.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="24" width="86" height="15" uuid="8be44138-044c-450a-9b4d-dc25f42bb920"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="24" width="208" height="15" uuid="09083e35-0c09-4e53-b36f-6d80d871b42b"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Domicilio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="39" width="543" height="1" uuid="98ec7c00-8a49-4e40-a408-00b30a374be2"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22">
+			<textField>
+				<reportElement x="4" y="0" width="59" height="21" uuid="04aef231-d5a4-488d-b208-0be5ae4f93b4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="0" width="133" height="21" uuid="6ab3b015-72d2-4aa4-846d-cd31dc342228"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="0" width="208" height="13" uuid="b9ad9d73-1b11-4525-ba6f-b8d835193db1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{domicilio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="86" height="21" uuid="8a15e2bb-ac1b-4b42-b970-f8bf7093715f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="491" y="0" width="40" height="21" uuid="4b436357-9632-4014-b797-9a1ee855ca17"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="534" y="0" width="21" height="21" uuid="96fe1e1e-a03c-4c60-8eeb-0824890ba324"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pagado}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="6" y="21" width="547" height="1" uuid="90e4129c-603e-4c1a-b6aa-bdcbc7db664e"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="100">
+			<rectangle>
+				<reportElement x="136" y="18" width="71" height="71" uuid="02ec58be-f96e-4e5f-9eb4-3ba3c407f49e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="24" y="18" width="75" height="71" uuid="85a94f0b-6765-48b7-b136-0e1bab982c20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="244" y="18" width="71" height="71" uuid="fadc65b2-71a8-40df-9657-2b92956c5b91"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="352" y="18" width="71" height="71" uuid="0a546e07-4338-4a7e-bace-737a5991ef64"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="460" y="18" width="71" height="71" uuid="68554292-4b5f-4b58-9848-29add33ead67"/>
+			</rectangle>
+		</band>
+	</pageFooter>
+</jasperReport>
